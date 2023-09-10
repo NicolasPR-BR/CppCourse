@@ -35,6 +35,7 @@ a = b
 ```
 
 ## Statements
+A statement is:
 <ul>
     <li>A complete line of code that performs some action</li>
     <li>Usually terminated with a semi-colon</li>
@@ -42,6 +43,47 @@ a = b
     <li>C++ has many types of statements
         <ul>
             <li>Expression, null, compound, selection, iteration, declaration, jump, try blocks, and others</li>
+        </ul>
+    </li>
+</ul>
+
+### Examples
+Declaration:
+```
+int x;
+```
+Assignment:
+```
+favorite_number = 12;
+```
+Expression:
+```
+1.5+2.9;
+```
+Assignment:
+```
+x = 2*5;
+```
+Conditional:
+```
+if(a>b) cout <<"A is greater than B";
+```
+# Using Operators
+<ul> 
+    <li>C++ has a 
+        <ul>
+        <li>unary, binary, ternary</li>
+        </ul>
+    </li>
+    <li>Common operators can be grouped as follows:
+        <ul>
+        <li>Assignment</li>
+        <li>Arithmetic</li>
+        <li>Increment/decrement</li>
+        <li>Relational</li>
+        <li>Logical</li>
+        <li>Member access</li>
+        <li>Other</li>
         </ul>
     </li>
 </ul>
