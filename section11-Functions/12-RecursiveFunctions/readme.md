@@ -1,4 +1,4 @@
-# Recursive funcions
+# Recursive functions
 <ul>
     <li>A recursive function is a function that calls itself
         <ul>
