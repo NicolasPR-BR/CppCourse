@@ -42,10 +42,10 @@ int Mystring::get_lenth() const
 	return strlen(str);
 }
 
-Mystring operator-(const Mystring& rhs)
+Mystring Mystring::operator-() const
 {
-	char* buff = new char[std::strlen(rhs.str) + 1];
-	std::strcpy(buff, rhs.str);
+	char* buff = new char[std::strlen(str) + 1];
+	std::strcpy(buff, str);
 
 	for (size_t i = 0; i < strlen(buff); i++) {
 		buff[i] = std::tolower(buff[i]);
@@ -84,16 +84,16 @@ Mystring& Mystring::operator=(Mystring&& rhs) noexcept{
 	return *this;
 }
 
-bool operator==(const Mystring &lhs, const Mystring &rhs){
-	if (std::strcmp(lhs.str, rhs.str) == 0)
+bool Mystring::operator==(const Mystring &rhs) const {
+	if (std::strcmp(str, rhs.str) == 0)
 		return true;
 	return false;
 }
 
-Mystring operator+(const Mystring &lhs, const Mystring &rhs)
+Mystring Mystring::operator+(const Mystring &rhs) const
 {
-	char* buff = new char[std::strlen(lhs.str) + std::strlen(rhs.str)+1];
-	std::strcpy(buff, lhs.str);
+	char* buff = new char[std::strlen(str) + std::strlen(rhs.str)+1];
+	std::strcpy(buff, str);
 	std::strcat(buff, rhs.str);
 
 	Mystring temp{ buff };

@@ -5,7 +5,7 @@
 
 int main()
 {
-	Mystring a{", World!"};
+	Mystring a{"Hello"};
 	Mystring b{};
 	b = a; // Copy constructor
 
@@ -22,8 +22,8 @@ int main()
 	b = b + b;
 	b.display();
 
-	a = "Hello" + a; //Member functions wouldn't allow this to happen
+	a = a + ", World!";
 	a.display();
-	
+
 	return 0;
 }

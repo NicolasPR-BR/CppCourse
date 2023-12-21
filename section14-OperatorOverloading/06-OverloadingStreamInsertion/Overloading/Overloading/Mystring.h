@@ -1,11 +1,14 @@
 #pragma once
+
+#include <iostream>
 class Mystring
 {
 private:
+	friend std::ostream& operator<<(std::ostream& os, const Mystring& rhs);
+	friend std::istream& operator>>(std::istream& in, Mystring& rhs);
+
 	char* str;
-	friend Mystring operator+(const Mystring &lhs, const Mystring& rhs);
-	friend bool operator==(const Mystring &lhs, const Mystring& rhs);
-	friend Mystring operator-(const Mystring &rhs);
+
 public:
 	Mystring();
 	Mystring(const char* s);
@@ -13,7 +16,9 @@ public:
 	~Mystring();
 	Mystring& operator=(const Mystring& rhs);
 	Mystring& operator=(Mystring&& rhs) noexcept;
-	
+	Mystring operator+(const Mystring& rhs) const;
+	Mystring operator-() const;
+	bool operator==(const Mystring& rhs) const;
 
 	void display() const;
 	int get_lenth() const;
